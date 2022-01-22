@@ -15,9 +15,8 @@ namespace SalesManager.Domain.Entities
         [Required]
         public int Quantity { get; private set; }
 
-        public OrderProduct(int orderId, int productId, int quantity)
+        public OrderProduct(int productId, int quantity)
         {
-            this.OrderId = orderId;
             this.ProductId = productId;
             this.Quantity = quantity;
         }
@@ -26,8 +25,6 @@ namespace SalesManager.Domain.Entities
     // Classes intermediarias para prevenir exposição da entidade.
     public class OrderProductInput
     {
-        [Required]
-        public int OrderId { get; set; }
         [Required]
         public int ProductId { get; set; }
         [Required]

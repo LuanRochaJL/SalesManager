@@ -50,7 +50,7 @@ namespace SalesManager.Api.Controllers
                 List<OrderProduct> orderProducts = new List<OrderProduct>();
                 foreach (var item in model.OrderProducts)
                 {
-                    orderProducts.Add(new OrderProduct(item.OrderId, item.ProductId, item.Quantity));
+                    orderProducts.Add(new OrderProduct(item.ProductId, item.Quantity));
                 }
                 Order order = new Order(model.UserId).SetCreationDateNow();
                 order.OrderProducts = orderProducts;
