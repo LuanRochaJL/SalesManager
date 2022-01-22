@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  auth-api:
+    build: 
+      context: .
+      dockerfile: Dockerfileauthapi
+    environment:
+      connectionString: "Data Source=mssql-server, 1433; Initial Catalog=salesmanager; User Id=sa; Password=Dev123456"
+    ports: 
+      - "5000:5000"
+    depends_on:
+      - mssql-server
+    networks:
+      - my-network
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfileapi
+    environment:
+      connectionString: "Data Source=mssql-server, 1433; Initial Catalog=salesmanager; User Id=sa; Password=Dev123456"
+    ports: 
+      - "5001:5001"
+    depends_on:
+      - mssql-server
+      
+    networks:
+      - my-network
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Dev123456"
+      MSSQL_PID: Developer
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - "1433:1433"
+    expose:
+      - 1433
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

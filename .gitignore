@@ -1,0 +1,99 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+bin
+obj
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+.vscode/launch.json
+.vscode/tasks.json
+SalesManagerAuth.Api/out/appsettings.Development.json
+SalesManagerAuth.Api/out/appsettings.json
+SalesManagerAuth.Api/out/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+SalesManagerAuth.Api/out/Microsoft.Data.SqlClient.dll
+SalesManagerAuth.Api/out/Microsoft.EntityFrameworkCore.Abstractions.dll
+SalesManagerAuth.Api/out/Microsoft.EntityFrameworkCore.dll
+SalesManagerAuth.Api/out/Microsoft.EntityFrameworkCore.Relational.dll
+SalesManagerAuth.Api/out/Microsoft.EntityFrameworkCore.SqlServer.dll
+SalesManagerAuth.Api/out/Microsoft.Identity.Client.dll
+SalesManagerAuth.Api/out/Microsoft.IdentityModel.JsonWebTokens.dll
+SalesManagerAuth.Api/out/Microsoft.IdentityModel.Logging.dll
+SalesManagerAuth.Api/out/Microsoft.IdentityModel.Protocols.dll
+SalesManagerAuth.Api/out/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+SalesManagerAuth.Api/out/Microsoft.IdentityModel.Tokens.dll
+SalesManagerAuth.Api/out/Microsoft.OpenApi.dll
+SalesManagerAuth.Api/out/Microsoft.Win32.SystemEvents.dll
+SalesManagerAuth.Api/out/SalesManager.Domain.dll
+SalesManagerAuth.Api/out/SalesManager.Domain.pdb
+SalesManagerAuth.Api/out/SalesManager.Repository.dll
+SalesManagerAuth.Api/out/SalesManager.Repository.pdb
+SalesManagerAuth.Api/out/SalesManagerAuth.Api.deps.json
+SalesManagerAuth.Api/out/SalesManagerAuth.Api.dll
+SalesManagerAuth.Api/out/SalesManagerAuth.Api.exe
+SalesManagerAuth.Api/out/SalesManagerAuth.Api.pdb
+SalesManagerAuth.Api/out/SalesManagerAuth.Api.runtimeconfig.json
+SalesManagerAuth.Api/out/Swashbuckle.AspNetCore.Swagger.dll
+SalesManagerAuth.Api/out/Swashbuckle.AspNetCore.SwaggerGen.dll
+SalesManagerAuth.Api/out/Swashbuckle.AspNetCore.SwaggerUI.dll
+SalesManagerAuth.Api/out/System.Configuration.ConfigurationManager.dll
+SalesManagerAuth.Api/out/System.Drawing.Common.dll
+SalesManagerAuth.Api/out/System.IdentityModel.Tokens.Jwt.dll
+SalesManagerAuth.Api/out/System.Runtime.Caching.dll
+SalesManagerAuth.Api/out/System.Security.Cryptography.ProtectedData.dll
+SalesManagerAuth.Api/out/System.Security.Permissions.dll
+SalesManagerAuth.Api/out/System.Windows.Extensions.dll
+SalesManagerAuth.Api/out/web.config
+SalesManagerAuth.Api/out/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+SalesManagerAuth.Api/out/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+SalesManagerAuth.Api/out/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+SalesManagerAuth.Api/out/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+SalesManagerAuth.Api/out/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+SalesManagerAuth.Api/out/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+SalesManagerAuth.Api/out/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll

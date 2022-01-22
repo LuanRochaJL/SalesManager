@@ -1,0 +1,25 @@
+# Busca a imagem base do SDK da Microsoft
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build-env
+WORKDIR /app
+
+# Copia os arquivo 'csproj' de cada projeto
+COPY SalesManager.Domain/SalesManager.Domain.csproj SalesManager.Domain/
+COPY SalesManager.Repository/SalesManager.Repository.csproj SalesManager.Repository/
+COPY SalesManagerAuth.Api/SalesManagerAuth.Api.csproj SalesManagerAuth.Api/
+
+#restaura dependencias (via Nuget)
+RUN dotnet restore ./SalesManager.Domain/SalesManager.Domain.csproj
+RUN dotnet restore ./SalesManager.Repository/SalesManager.Repository.csproj
+RUN dotnet restore ./SalesManagerAuth.Api/SalesManagerAuth.Api.csproj
+
+# Copia os arquivos do projeto e 'build' tudo usando a configuração de Release
+COPY . ./
+RUN dotnet publish ./SalesManagerAuth.Api -c Release -o out
+
+
+# Geração da imagem em RUNTIME
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine
+WORKDIR /app
+ENV ASPNETCORE_URLS http://+:5000/
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "SalesManagerAuth.Api.dll"]
